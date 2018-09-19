@@ -1,0 +1,45 @@
+Ansible
+
+https://medium.com/@vineetcloudops/ansible-from-scratch-9e466111d47b
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCmAo4GOzHO1hbisoyP1vNBo9eKjYRzoRIWClRwQa1YgEFAkHEPaTn2I5JjYkT4xn/0Nje8N2a5XEjcZZQbwWwLo2AvgBLtq3K8fC3fafVTAoOJYUCJWO1UuJfHlJ9y172mu8HZE7y19G/1VmsAgXmDfvUZeFtC31rbBy9hvDENsgiXlUXekyCMVxFTsGAHJQDIeoOx4XSPR14SlqajbJNuumjimI4ImJXFnevL8Vj9VabADmFQMUqcPXFHdhKFgJcLmkg0lys+b6B3kfR3OfkEIrTtz4fZZN2zZqtynYMEo1pSmX5+pbYV2w7FimiwdIR3FPhlcvGBHt+UdSqlvHVL root@ansible-tower
+
+
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCZnskXJBWJUiLqDeS+kI5Cr+F5LatBHFx81chLfW1hrVFzvo/8UIkjSR4dTkYd0clm92Tb+RV+OqGTs0o+L5vRHeHEl22Qi6+KMSxO3r5qghAw7VNoIuo9o/WhXY85yMHnKRh1FK6ZRtDBkm54lWnSc1+OG0nXlBtW0oh/4Ppda54Ftflg+955+ILu0qdpXCkTRAv3T5R2yBLVV5S7uM/OgKtlXKc1tpIo2MBEHnKhqGIWqWoHyojD7Gj8TTtfDQ9WpUO5skz4gdQWPGAKnLIWR6/gbDuvfK8gS4YGo964Q39kXM8w+Kq2CpV8iX0lCn2/B+JxpyIdBH8lWjwpJ+wF root@ans-tow
+
+
+scp C:\Users\Training2\Downloads\ansible-tower-setup-latest.tar.gz root@35.233.205.112:/root/
+
+
+[tower]
+ans-tow ansible_ssh_host=10.0.0.11
+[ops]
+ansible ansible_ssh_host=10.0.0.2
+chef ansible_ssh_host=10.0.0.3
+docker ansible_ssh_host=10.0.0.4
+jenkins ansible_ssh_host=10.0.0.5
+puppet ansible_ssh_host=10.0.0.6
+
+[clients]
+client-100 ansible_ssh_host=10.0.0.7
+client-101 ansible_ssh_host=10.0.0.8
+client-102 ansible_ssh_host=10.0.0.9
+client-103 ansible_ssh_host=10.0.0.10
+
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDV7euspl0+dEGmdOEHT0ZNOP+4jkf+hfOie9P+b/ycpNeVqGPHByVBsSXHdpMDjT5ELkUoiccxD4m33P57BHs15Ufu/UHRmhiiWCzimY2kbsh0uYfCYnGw+o9Gz3ck+qyQBltuQy3jsKHWV6gc/7f0hmKr4RP5RbFwJZuEKVAiPNPQPH5tUPbwtZW1+R/omNYO29lW6y5KQnhHYQxh41sa1To7NvUAT4EZwT1oxp1Yguolf63EB7rCezmxgtHBbRvEk8N40P9We5n76rxa1Q4kCKH6UGC7Cu/haIVwPfiZViJLZ7NCO0IvDCnciGfurllrCk0k221MXAf7PuvJLqYn training2@DESKTOP-8PTPCFJ
+
+
+pg_host='127.0.0.1'
+pg_port='5432'
+
+pg_database='awx'
+pg_username='awx'
+pg_password='asdf'
+
+rabbitmq_port=5672
+rabbitmq_vhost=tower
+rabbitmq_username=tower
+rabbitmq_password='asdf'
+rabbitmq_cookie=cookiemonster

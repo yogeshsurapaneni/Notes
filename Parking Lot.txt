@@ -1,0 +1,15 @@
+is there are any differences in installing jenkins with tomcat server and through apt-get in linux directly?
+What is diff b/w configaration managaement and bare metal configaration?
+  
+  
+  
+if we are using a firewall what port do we  need to allow for ssl connection between agent and node?
+
+nagios
+what is service flapping?
+will nagios server do all the checks for clients at same time or at different time?
+can i make a host to check at particular time?
+
+ 10.0.0.0 ansible_ssh_host=hostname
+ 
+ 10.0.0.0 ansible_ssh_pass=xxx ansible_ssh_user=xxx

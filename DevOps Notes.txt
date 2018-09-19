@@ -1,0 +1,632 @@
+Git Installation
+Centos
+sudo yum groupinstall "Development Tools"
+
+
+sudo yum install gettext-devel openssl-devel perl-CPAN perl-devel zlib-devel
+
+sudo yum install wget
+sudo yum install git(Regular Version of git)
+for git version 2.7.2
+wget https://www.kernel.org/pub/software/scm/git/git-2.7.2.tar.gz
+tar -zxf git-2.7.2.tar.gz
+cd git-2.7.2
+make configure
+./configure --prefix=/usr/local
+175  sudo make install
+To append our names and email to commit
+git config --global user.name "yogi"
+git config --global user.email "yogeshsurapaneni@gmail.com"
+
+
+ssh-keygen -t rsa -b 4096 -C "sampleemaildevops@gmail.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+cat ~/.ssh/id_rsa.pub
+ssh -T git@github.com
+
+
+:w !sudo tee %
+
+ubuntu edureka master
+10.1.10.58 
+
+ubuntu edureka slave
+10.1.10.60  
+
+Jenkins Installation
+
+wget -q -O -https://jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add
+
+
+How to install Puppet master and slave on ubuntu
+https://www.howtoforge.com/puppet-ubuntu-14.04
+
+https://www.youtube.com/watch?v=u9Q0Xf1G7oU&list=PL9ooVrP1hQOGqLGptTAXo1kYoB8AwV5yM
+
+puppet
+puppet-master
+puppetlabs-release
+puppetmaster
+ 
+73bf27789a93b3b9901f6d218297dd8e639b57da
+ 
+ a66af4b2ca231d1ad2d7e9b572e3af63616a9e49
+ 
+ 
+ export PATH=/opt/puppetlabs/bin:$PATH
+ 
+ 
+ PUPPET AGENT INSTALL NOTES
+ 
+ agent
+
+hostname
+slave
+
+127.0.0.1       localhost
+10.0.12.120		slave
+10.0.12.116		master
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+
+
+
+[main]
+logdir=/var/log/puppet
+vardir=/var/lib/puppet
+ssldir=/var/lib/puppet/ssl
+rundir=/var/run/puppet
+factpath=$vardir/lib/facter
+#templatedir=$confdir/templates
+
+[master]
+# These are needed when the puppetmaster is run by passenger
+# and can safely be removed if webrick is used.
+ssl_client_header = SSL_CLIENT_S_DN
+ssl_client_verify_header = SSL_CLIENT_VERIFY
+
+[agent]
+server = slave
+
+ 
+ 
+validate - validate the project is correct and all necessary information is available
+
+compile - compile the source code of the project
+
+test - test the compiled source code using a suitable unit testing framework. These tests should not require the code be packaged or deployed
+
+package - take the compiled code and package it in its distributable format, such as a JAR.
+
+verify - run any checks on results of integration tests to ensure quality criteria are met
+
+install - install the package into the local repository, for use as a dependency in other projects locally
+
+deploy - done in the build environment, copies the final package to the remote repository for sharing with other developers and projects.
+
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+export PATH=$JAVA_HOME/bin:$PATH
+source .bashrc
+
+java
+
+https://www3.ntu.edu.sg/home/ehchua/programming/howto/JDK_Howto.html
+
+https://tecadmin.net/install-tomcat-9-on-ubuntu/
+
+curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+
+sudo mv msudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-zesty-prod zesty main" > /etc/apt/sources.list.d/dotnetdev.list'icrosoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
+
+Build Plugin maven pom
+
+<plugin>
+    <groupId>org.dstovall</groupId>
+    <artifactId>onejar-maven-plugin</artifactId>
+    <version>
+        <strong>1.3.0</strong>
+    </version>
+    <executions>
+        <execution>
+            <configuration>
+                <mainClass>
+                    <strong>your.package.YourMainClass</strong>
+                </mainClass>
+            </configuration>
+            <goals>
+                <goal>one-jar</goal>
+            </goals>
+        </execution>
+    </executions>
+</plugin>
+
+
+
+
+nagios install
+https://www.howtoforge.com/tutorial/ubuntu-nagios/
+
+Upgrading nagios from ver to version
+https://www.howtovmlinux.com/articles/monitoring/nagios-core/upgrade-nagios-core-to-the-latest-version-4-x-x.html
+
+
+
+to check the nagios host config file
+/usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+
+
+Installation of docker by repository way
+
+
+https://docs.docker.com/install/linux/docker-ce/ubuntu/#set-up-the-repository
+
+curl -sSL https://get.docker.com/ | sh
+
+to stop and close docker containers and remove images
+
+https://tecadmin.net/remove-docker-images-and-containers/
+
+Puppet master and agent install
+
+
+
+https://www.itzgeek.com/how-tos/linux/ubuntu-how-tos/how-to-install-puppet-on-ubuntu-16-04.html
+
+
+
+uninstalling puppet
+
+Uninstall puppet
+To remove just puppet package itself from Ubuntu 14.04 (Trusty Tahr) execute on terminal:
+
+sudo apt-get remove puppet
+Uninstall puppet and it's dependent packages
+To remove the puppet package and any other dependant package which are no longer needed from Ubuntu Trusty.
+
+sudo apt-get remove --auto-remove puppet
+Purging puppet
+If you also want to delete configuration and/or data files of puppet from Ubuntu Trusty then this will work:
+
+sudo apt-get purge puppet
+To delete configuration and/or data files of puppet and it's dependencies from Ubuntu Trusty then execute:
+
+sudo apt-get purge --auto-remove puppet
+
+
+
+
+increase the size of vm disk
+open cmd prompt on the c:/programfiles/oracle/Virtualbox folder and type following in cmd
+
+
+VBoxManage.exe modifymedium "/path to the VM .vdi" --resize 20999
+
+
+
+
+Create apipelinenamed SAMPLE_COMPILE_VIEW with Build Pipeline Viewoption, selectDEVELOPER_COMPILE project under layout section and run the pipeline to check the console output
+
+Take ascreenshot of the pipeline dashboard showing the status of the projects
+
+pipelines can also be extended to running web tests and Load tests. Explain how you would do the same using Jenkins?
+
+to search tags od docker images
+
+curl -s -S 'https://registry.hub.docker.com/v2/repositories/library/centos/tags/' | jq '."results"[]["name"]' |sort
+
+
+ 
+ docker run -it --volume /tmp/sharedfolder:/sharedfolder_from_host centos
+
+ 
+ 
+cd /tmp
+mkdir demo1
+cd /demo1
+ 
+echo "FROM tomcat
+
+LABEL maintainer="yogi"
+
+RUN apt-get -y update && apt-get -y upgrade
+
+WORKDIR /usr/local/tomcat
+
+COPY tomcat-users.xml /usr/local/tomcat/conf/tomcat-users.xml
+COPY context.xml /usr/local/tomcat/webapps/manager/META-INF/context.xml
+
+EXPOSE 8080" > Dockerfile
+
+echo "<Context antiResourceLocking="false" privileged="true" >
+    <!-- <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+        allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" /> -->
+    <Manager sessionAttributeValueClassNameFilter="java\.lang\.(?:Boolean|Integer|Long|Number|String)|org\.apache\.catalina\.filters\.CsrfPreventionFilter\$LruCache(?:\$1)?|java\.util\.(?:Linked)?HashMap"/>
+</Context>" > context.xml  
+  
+echo "<tomcat-users xmlns="http://tomcat.apache.org/xml"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://tomcat.apache.org/xml tomcat-users.xsd"
+              version="1.0">
+  <user username="yogi" password="asdf" roles="manager-gui"/>
+</tomcat-users>" > tomcat-users.xml
+
+docker build -f /tmp/demo1/Dockerfile -t tomcat:addressbook .
+
+docker run -d -p 8094:8080 --name "tomcat_addr" tomcat:addressbook
+
+docker cp /var/lib/jenkins/workspace/package_addressbook/addressbook_main/target/addressbook.war tomcat_addr:/usr/local/tomcat/webapps/addressbook.war
+
+
+Ansible installation
+
+$ sudo apt-get update
+$ sudo apt-get install software-properties-common
+$ sudo apt-add-repository ppa:ansible/ansible
+$ sudo apt-get update
+$ sudo apt-get install ansible
+
+
+ansible
+
+
+- name: install basic package
+  action: >
+    {{ ansible_pkg_mgr }} name=vim state=present update_cache=yes
+	
+	
+Kmaster
+
+kubeadm join 10.0.0.9:6443 --token u5uk8c.sds3alb0nwccg062 --discovery-token-ca-cert-hash sha256:e2b6d8cb64df82189c088d204ac589498cc84f72c63a6b51869647de44234474
+
+
+	
+	
+JAVA
+sudo add-apt-repository ppa:openjdk-r/ppa
+sudo apt-get update
+sudo apt-get install openjdk-8-jdk
+sudo update-alternatives --config java
+sudo update-alternatives --config javac
+
+
+
+cat << EOF > /tmp/yourfilehere
+These contents will be written to the file.
+        This line is indented.
+EOF
+
+kubectl proxy --address <MASTER_EXTERNAL_IP> --port=9999 --accept-hosts='^*$'
+
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCbgAlhRUiXHMxsPtPxOsGXRCyMEkuBrbFVUaq5Xyj1kiigOZzqGRWD6DKBc2kpJ2ZnnZ1ECgw81BA4/vKeCF3JwBdPEtn5svVNWxE0HYCylARflQD2k8lKSq5i7Sm5HiKUJBn5gE6kX/k/sf7cvyJOVZJyxXIC4Wy40j5E1UR6wJ3T8AQvFHi5aHBHXJ6pEv29h5fWqixOUJcr+4IjgyG8pQOyymYge4Ddjk7n7kn9Rw6IvkLumPJPKTxn5Ame7goArcgjb572TJoNdqdS0SkP0cDO+uMENLEFWwYbAIegjAtFgiLECpuYo68F9shIP/lJnJ4CXrwSYNHfgVeO4FC9 root@ansible
+
+
+apt-get --reinstall install initscripts
+
+%s/client-100/chef/g 
+
+---
+- hosts: all
+  tasks:
+    - name: Update and Upgrade Packages
+      become: yes
+      apt:
+        upgrade: yes
+        update_cache: yes
+        cache_valid_time: 86400
+    - name: install nrpe
+      become: yes
+      action: >
+        {{ ansible_pkg_mgr }} name={{ item }} state=present update_cache=yes
+      with_items:
+        - nagios-nrpe-server
+        - nagios-plugins
+        - tree
+    - lineinfile:
+        path: /etc/nagios/nrpe.cfg
+        regexp: '^server_address'
+        insertafter: '^server_address='
+        line: 'server_address=10.0.0.2'
+    - name: start nagios server
+      service:
+        name: nagios-nrpe-server
+        state: restarted
+      become: yes
+
+
+
+ansible all -m shell -a 'timedatectl set-timezone America/Los_Angeles' --become
+
+
+command: Used to execute command in bash and see the result
+ansible webservers -m command -a "pwd"
+shell: operations like piping and redirects will not work in command. In these situations, you have to use shell module.
+ansible webservers -m shell -a 'echo $LD_PATH'
+file: Used to create files, directories, set, or change file permissions and ownership etc.
+ansible webservers -m file -a 'dest=/home/ubuntu/new.txt mode=600 owner=vishnu group=vishnu'
+ansible webservers -m file -a 'dest=/home/ubuntu/new mode=755 state=directory owner=vishnu'
+copy: Used for copying files to multiple nodes concurrently
+ansible webservers -m copy -a 'src=/home/user/cfg.ini dest=/home/ubuntu /cfg.ini'
+yum/apt: For installation and management of applications
+ansible webservers -m apt -a 'name=python state=present'
+user: To add and delete users
+ansible webservers -m user -a 'name=user1 password=somepassword'
+ansible webservers -m user -a 'name=user1 state=absent' (to delete user)
+service: To manage services like httpd, mysqld etc.
+ansible dbservers -m service -a 'name=mysqld state=started'
+setup: It's used for gathering facts about the hosts
+ansible all -m setup
+
+
+nagios
+
+#!/bin/bash
+
+countWarnings=$(/usr/local/nagios/bin/nagiostats | grep "Ok/Warn/Unk/Crit:" | sed 's/[[:space:]]//g' | cut -d"/" -f5)
+
+if (($countWarnings<=5)); then
+                echo "OK - $countWarnings services in Warning state"
+                exit 0
+        elif ((6<=$countWarnings && $countWarnings<=30)); then
+				# This case makes no sense because it only adds one warning.
+				# It is just to make an example on all possible exits.
+                echo "WARNING - $countWarnings services in Warning state"
+                exit 1
+        elif ((30<=$countWarnings)); then
+                echo "CRITICAL - $countWarnings services in Warning state"
+                exit 2
+        else
+                echo "UNKNOWN - $countWarnings"
+                exit 3
+fi
+
+
+
+
+
+
+
+
+
+
+		chef ruby
+		
+		echo 'export PATH="/opt/chefdk/embedded/bin:$PATH"' >> ~/.bash_profile && source ~/.bash_profile
+		
+
+You need to add it to your ~/.profile or ~/.bashrc file. 
+
+export PATH="$PATH:/path/to/dir"
+Depending on what you're doing, you also may want to symlink to binaries:
+
+cd /usr/bin
+sudo ln -s /path/to/binary binary-name
+Note that this will not automatically update your path for the remainder of the session. To do this, you should run:
+
+source ~/.profile 
+or
+source ~/.bashrc
+		
+		
+
+		
+		azure
+		
+		
+		ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAqU/zags4ygv3KHD8FbjvFe8Mau7MvuYISlEC3tBAydfRwDgX9s4e0iVpFS8S+wlx+ILAbqnlle+lyARO1elCBvCj2E2tKKQui94pdUE+rpgCm9hrlv1S8KbsD2dLmRhihJzvMgEdSCM2I4FoWKPM6CECb826kIhtnxSXt1e12hqEWApHNmdh0IsA9oidr89IXkCA112+nOpVHA/iU1LXlD2lYrxpU9C26ExlCcqzOiAo0JETChyQhC/Vw5651bA7aZrjm9ic3uSkMvIo+Nl6eHnOrK3DEctXIn+mmyOb2JgPH4PGHI40N7IOttqGb5ZR8shJbGS3dFXIIUyg0IN6ew== rsa-key-20180719
+		
+		
+		
+		
+		jenkins
+		
+		ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6uBq4pTdLawB+ndds/hdKRLRE1Pg8hjlHOOc9LprFZXyQHKAUfhl96cWb+ewx7DzkjdbbinDGOOUOLG1MCJFpV4ob+jM///aCyzdfu/MWTWj9HgB9IQme2ruJAsl9VGMg5JlK9SZi3nwc9FKthgrU7wQhx2v4VQZzdjm5iEYaIXCTZcMvu5eeKrzmcjJKNKAe8WtVkriSjR36QVKJfE9qGW8OBsNNuikD4zZ2C6BUrhpeqoMGPNmMaq5/NAt2eLKeoKhkVHVELj9TKLqpZJpUA7Z3g7OMq/lHW+C2IdkF/dJ50865nu30XUcym7Iv/upZHy+7x3fSae1tQHz1PTeT root@jenkins
+		
+		
+		
+		
+
+L=5<P#|.zoREQuo
+
+
+
+Kubernetes to chnage the cgroup driver
+- Change the cgroup-driver
+We need to make sure the docker-ce and kubernetes are using same 'cgroup'.
+
+Check docker cgroup using the docker info command.
+
+docker info | grep -i cgroup
+
+And you see the docker is using 'cgroupfs' as a cgroup-driver.
+
+Now run the command below to change the kuberetes cgroup-driver to 'cgroupfs'.
+
+sed -i 's/cgroup-driver=systemd/cgroup-driver=cgroupfs/g' /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+
+Reload the systemd system and restart the kubelet service.
+
+systemctl daemon-reload
+systemctl restart kubelet
+
+Now we're ready to configure the Kubernetes Cluster.
+
+
+
+
+
+clear
+    2  cd /root
+    3  ls
+    4  apt-get update
+    5  apt-get install -y docker.io
+    6  apt-get update && apt-get install -y apt-transport-https curl
+    7  curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+    8  cat <<EOF >/etc/apt/sources.list.d/kubernetes.list
+deb http://apt.kubernetes.io/ kubernetes-xenial main
+EOF
+
+    9  apt-get update
+   10  apt-get install -y kubelet kubeadm kubectl
+   11  apt-mark hold kubelet kubeadm kubectl
+   12  docker info | grep -i cgroup
+   13  sed -i 's/cgroup-driver=systemd/cgroup-driver=cgroupfs/g' /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+   14  systemctl daemon-reload
+   15  systemctl restart kubelet
+   16  kubeadm config images pull
+   17  kubeadm init --apiserver-advertise-address=10.0.0.2 --pod-network-cidr=10.0.0.0/16
+   18  mkdir -p $HOME/.kube
+   19  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+   20  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+   21  kubectl get nodes
+   22  kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/v0.10.0/Documentation/kube-flannel.yml
+   23  kubectl get pods --all-namespaces
+   24  kubeadm token list
+   25  kubectl get pods --all-namespaces
+   26  kubectl describe pods
+   27  kubectl describe nodes
+   28  kubectl get pods --all-namespaces
+   29  kubectl get all --all-namespaces
+   30  kubectl get node
+
+kubectl apply -f https://docs.projectcalico.org/v2.6/getting-started/kubernetes/installation/hosted/kubeadm/1.6/calico.yaml
+
+kubeadm join 10.0.0.2:6443 --token nybk92.6nabrg7pk5l6vss1 --discovery-token-ca-cert-hash sha256:9b8c4089a90e8682619a2b78c5c480651ab4718356c036191057a4aaea9566df
+
+for kubernetes dashboard
+
+To deploy Dashboard, execute following command:
+
+$ kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/master/src/deploy/recommended/kubernetes-dashboard.yaml
+To access Dashboard from your local workstation you must create a secure channel to your Kubernetes cluster. Run the following command:
+
+$ kubectl proxy
+
+kubectl proxy --address='10.0.0.2' --port=3430 --accept-hosts='.*'
+
+Now access Dashboard at
+
+/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy
+
+To find out how to create sample user and log in follow Creating sample user guide.
+
+NOTE:
+
+The shortcut http://localhost:8001/ui is deprecated. Use the full proxy URL shown above.
+Heapster has to be running in the cluster for the metrics and graphs to be available. Read more about it in Integrations guide.
+
+
+cat <<EOF | kubectl create -f -
+apiVersion: rbac.authorization.k8s.io/v1beta1
+kind: ClusterRoleBinding
+metadata:
+  name: kubernetes-dashboard
+  labels:
+    k8s-app: kubernetes-dashboard
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+- kind: ServiceAccount
+  name: kubernetes-dashboard
+  namespace: kube-system
+EOF
+
+
+
+Setup kubernetes
+
+https://medium.com/@Alibaba_Cloud/how-to-install-and-deploy-kubernetes-on-ubuntu-16-04-6769fd1646db
+https://www.techrepublic.com/article/how-to-quickly-install-kubernetes-on-ubuntu/
+
+https://www.blazemeter.com/blog/how-to-setup-scalable-jenkins-on-top-of-a-kubernetes-cluster
+
+Packer
+https://www.terraform.io/intro/getting-started/build.html
+Google Cloud Provider
+The Google Cloud provider is used to interact with Google Cloud services. The provider needs to be configured with the proper credentials before it can be used.
+
+Use the navigation to the left to read about the available resources.
+
+» Example Usage
+// Configure the Google Cloud provider
+provider "google" {
+  credentials = "${file("account.json")}"
+  project     = "my-gce-project-id"
+  region      = "us-central1"
+}
+
+// Create a new instance
+resource "google_compute_instance" "default" {
+  # ...
+}
+--------------------------------------------------------------------------------------------
+aws.json
+root@terraform:~/packer-templates# cat aws.json 
+{
+  "variables": {
+    "aws_access_key": "AKIAJGYEG5ENMKMPDVQA",
+    "aws_secret_key": "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"
+  },
+  "builders": [{
+    "type": "amazon-ebs",
+    "access_key": "{{user `aws_access_key`}}",
+    "secret_key": "{{user `aws_secret_key`}}",
+    "region": "us-west-2",
+    "source_ami_filter": {
+      "filters": {
+      "virtualization-type": "hvm",
+      "name": "ubuntu/images/*ubuntu-xenial-16.04-amd64-server-*",
+      "root-device-type": "ebs"
+      },
+      "owners": ["099720109477"],
+      "most_recent": true
+    },
+    "instance_type": "t2.micro",
+    "ssh_username": "ubuntu",
+    "ami_name": "packer-example {{timestamp}}"
+  }]
+}
+
+
+
+
+https://www.rosehosting.com/blog/install-tomcat-9-on-an-ubuntu-16-04-vps/
+
+
+The old syntax:
+
+- name: Install list of packages
+  action: apt pkg={{item}} state=installed
+  with_items:
+       - package1
+       - package2
+       - package3
+       - etc
+The new syntax:
+
+- name: Install list of packages
+  apt: name={{item}} state=installed
+  with_items:
+       - package1
+       - package2
+       - package3
+       - etc
+
+
+	   
+	   php login website
+	   
+	   
+	   
+	   http://codewithawa.com/posts/complete-user-registration-system-using-php-and-mysql-database
+	   
+	   
+	   

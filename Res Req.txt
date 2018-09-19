@@ -1,0 +1,98 @@
+ Monitor and standardize access controls using IAM and/or SSO
+ C#, Java Script, JSON, SonarQube, Octopus Deploy, Selenium, Chef, Puppet,Ansible,Terraform,Pester, Test Kitchen, xUnit, PowerShell, MS SQL, Red gate Tools, Azure Deployment,Azure ARM, Azure Web Apps,Azure API Apps,Azure Service Fabric, Azure KeyVault,Docker,Kubernetes,SCORCH,Application Insights
+ Server Virtualization,vmware virtualization.
+ 
+ Webservers
+ Practical experience administering application servers, web servers, and databases: Jetty, Tomcat, Websphere, Nginx, Mongrel, Microsoft IIS, Oracle, MySQL, MongoDB.
+ 
+ 
+
+-SQL (MySQL or PgSQL, or Aurora in AWS) useful * One or more of: Perl, Python, Ruby
+
+• Manage access controls, logging, and life-cycle management policies for S3 buckets
+• Administer and provision infrastructure in AWS environment using automated scripts (e.g. CloudFormation, Ruby, Python, AWS SDK, Ansible)
+• Build and deploy applications and other artifacts from code to various environments using existing infrastructure (using tools like Jenkins, CodeBuild, Packer, etc.)
+• Standardize, automate and document setup of development, test, and production environments
+• Define and deploy monitoring, metrics, and logging systems on AWS
+• Collaborate with peers on work estimation/planning and implementation of new versions/features of tools 
+• Bring new automation technologies to improve the velocity of the development life cycles Other duties as assigned
+Design, develop, document, integrate, test and deliver scripts, code and other services employing agile DevOps project life-cycle methodologies, processes procedures, in AWS cloud environment.
+• Is influential and engages actively in building out a dynamic and productive development organization and continuously improving practices and methodology.
+• Designs and develops applications with an eye towards simplicity, reliability, manageability, scalability, extensibility, performance and re-use.
+• Support (2nd level) and troubleshoot problems with existing applications.
+Minimum 5 years demonstrated experience with full stack development.
+Experience with the Atlassian Suite, Sonar, Crucible and Electric Commander
+
+Experience with Distributed Service Standards (SOAP, REST, EJB)
+Exposure to an Agile development environment with use of Jira
+Familiarity with monitoring tool suites like DataDog, SumoLogic, NewRelic, and Nagios
+
+Implementation of Release Management automation processes using Team Foundation Server (TFS),Visual Studio Team Services ( VSTS )
+Experience with automated testing tools (i.e. selenium, JMeter) are a plus
+Expertise in the knowledge of programming languages, relational databases, and NoSQL databases
+Strong practical Linux based systems administration skills and scripting experience in a Cloud based environment
+Expertise in SCM concepts (code lines, branching, merging, integration, versioning, etc.)Develop sound version control best practices based on AWS CM systems, AWS SAM Deployment
+Strong SQL, PL/SQL skills in RDBMS, Oracle, SQL Server
+Good usage of Apache Hadoop along enterprise version of Cloudera and Hortonworks. Good Knowledge on MAPR distribution & Amazon’s EMR. 
+• Worked on Cloudera distribution and deployed on AWS EC2 Instances.
+• Hands on experience on Cloudera Hue to import data on to the graphical User Interface.
+
+Experience in Hybrid Cloud Architectures, Cloud brokering solutions or Cloud Management Solutions
+Mobile app build, deployment & publish: 3 years
+
+Application build/deployment experience on Unix/AIX/Linux: 5 years
+
+Application build/deployment experience on Microsoft: 3 years
+
+Working knowledge of J2EE, JAVA, javascript, or python frameworks and design patterns
+JAVA programming knowledge.
+Experience with a variety of open source technologies and tools in support of cross-team collaboration
+Fluency in Python or other programming or scripting language
+years systems administration experience managing enterprise Unix/Linux environments.
+2+ years of strong experience in configuring and managing services and Cassandra in AWS.
+2+ years of experience in a DevOps role that goes beyond traditional operations to enable building the right frameworks to automate deployment and restacking on AWS.
+Scripting and programming experience e.g. python or ruby,Ruby, Perl, Python, etc.
+AWS Professional Certifications
+• Excellent Linux knowledge – RHCE or equivalent level of knowledge 
+• Thorough understandings of AWS VPC design and provisions for security controls
+• Experience with tooling areas: Source Code Control (git), Scripting languages (Ruby, Python), Markup languages (YAML, JSON), CloudFormation and optionally Terraform
+• Configuration Management (Chef and/or Ansible)
+• Deep working knowledge with Aws SDK and API/CLI
+• Experience using command line for automation/configuration management using Puppet, Chef or Ansible
+• Experience with use of Lambda, SQS, DynamoDB, and other services
+• Experience with AWS Services Access Management (Users, Roles, Policies)
+• Experience with AWS networking services (VPC, CloudFront, Route 53, API Gateway)
+• Experience with AWS management tools (CloudWatch, CloudTrail, Config, System Manager, etc.)
+• Experience in development of automation tools (CloudFormation, Terraform, Ansible, etc.)
+• Experience with SDLS tools GIT, JIRA, confluence, Jenkins
+• Experience designing and implementing HIPAA compliant environments
+excellent problem solving and design skills and ability to lead a small team of developers.
+excellent communication, and a positive get-it-done attitude. 
+Healthcare domain expertise and experience working in Agile driven development projects and AWS cloud migration is must.
+Azure, Chef, Ruby
+Build & Deploy
+Cloud
+Kubernetes & Docker
+Teamcity, Jenkins, VSTS, Ansible, Python, Git
+• Strong XML skills, Unit test frameworks and Databases experience (Oracle and Mark logic preferred) is required.
+• Hands on Experience with Web Services (RESTful APIs / JSON, SOAP, XML-RPC, etc).
+• Thorough understanding of Object Oriented principles (Analysis and Design), Devops culture and NoSQL database.
+• 2+years of working experience with Red Hat Fuse ESB and camel.
+Solid understanding of networking concepts and Internet protocols (TCP/IP, DNS, SMTP, TLS, etc.).
+• Networking: Experience with virtual firewalls, AWS DirectConnect, VPN tunnels, VpN dns load balancing
+General understanding of the need for and use of multi-tier architectures, load balancers, caching, web servers, application servers, databases, and networking.
+• Linux/Windows: Experience working on Linux servers, Comfortable with shell scripting.
+Experience building infrastructure as code using AWS CloudFormation or similar scripting techniques
+Ability to work independently with minimal direction
+
+Strong interpersonal skills, written and verbal communication
+
+Strong decision-making, problem-solving skills, critical thinking and testing skills
+
+ Excellent problem solving, analytical skills and technical troubleshooting skills
+- Strong verbal and written communication skills
+- Ability to work independently as well as part of a team
+Advanced troubleshooting skills across network, application, caching, queuing, load-balancing, storage and distributed services layers. 
+3 years of experience developing and releasing software into production using the AWS stack. 
+
+5yrs experience running large-scale online systems built on AWS or similar cloud providers.

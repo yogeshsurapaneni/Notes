@@ -1,0 +1,84 @@
+
+Access Key ID:
+AKIAI5ZJZRE2LLLPJRMQ
+
+
+Secret Access Key:
+VTQEqX6ozeiHmvpymWp3wI3DfLxq7qtQWna27QY4
+
+
+
+package 'apache2' do
+   action:install
+end
+
+service 'apache2' do
+   action [ :enable, :start ]
+end
+
+cookbook_file '/var/www/html/index.html' do
+   source 'fuse.html'
+   mode '0644'
+end
+
+
+yogi8080
+
+Sec Access key
+
+i6uoouEb3EBXQy4Tal7MbMbTj/hAh0d0RCLSXSEd
+
+Access Key ID
+
+AKIAJOK6P37HINDMLKMA
+
+
+
+cat << EOF > /root/aws-play.yml
+
+hosts: localhost
+	connection: local
+    become: yes
+    
+
+cat << EOF > /root/provision.sh
+
+#!/bin/bash
+set -e
+
+sudo apt-get update
+
+echo "Update Done"
+
+audo apt-get -y upgrade
+
+sudo apt-get install -y python-dev python-pip
+
+sudo pip install ansible
+
+sudo timedatectl set-timezone America/Los_Angeles
+
+echo "Running Build"
+
+sudo ansible-playbook aws-play.yml 
+
+EOF
+
+
+VAULT
+
+You may need to set the following environment variable:
+
+    $ export VAULT_ADDR='http://127.0.0.1:8200'
+
+The unseal key and root token are displayed below in case you want to
+seal/unseal the Vault or re-authenticate.
+
+Unseal Key: xJJNQau8Esw4o0LkY7W0f8RAedvrMqPGV8Th512vS8E=
+Root Token: b0bb9724-07d2-a3e1-e076-0d77f96d3d26
+
+winse pass
+
+h9nj%<tn8Y|m?kC
+
+

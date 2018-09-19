@@ -1,0 +1,121 @@
+Req:
+1.
+Significant expertise with distributed systems, ideally in a cloud environment         
+Strong experience with Kubernetes and container technologies         
+Strong experience with Docker and Ansible, exposure to automation tooling (chef/puppet/salt/etc)         
+Very strong understanding of cloud technologies – has deployed more than one solution on the cloud  Significant experience with cloud technologies and DevOps approaches to modern software delivery   Experienced with modern cloud-based software tools and approaches (Git, CI/CD, automated testing) 
+Good understanding of networking
+Bachelor degree in Computer Science or equivalent experience.
+Experience in Agile environments – both scrum and kanban.
+Able to contribute beyond just coding (code reviews, demos, proof of concept solutions)        Detail-oriented personality who does not lose sight of the big picture        
+Must have experience shipping software in a successful customer-facing Cloud Business        Entrepreneurship — startup experience highly desired
+ 
+2. 
+Primary Skills: Should have 6+ yrs Exp on DevOps CI, CD Process. 
+having a enough knowledge Release management  
+Secondary Skills: Design and implement DevOps platform which covers areas such as build automation, deployment automation, test automation, SDLC orchestration, environment.  
+
+Responsibilities:
+Design and implement DevOps platform which covers areas such as build automation, deployment automation, test automation, SDLC orchestration, environment management, monitoring, and production release procedures.  
+Experience in DevOps CI, CD Process  
+Good experience in configuration management
+Strong experience in integration of Build, Deploy & Test tools
+Should be familiar with ITIL process. 
+
+3.
+Strong background in Linux/Unix Administration
+Experience with automation/configuration management using either Puppet, Chef or an equivalent  ·      Ability to use a wide variety of open source technologies and cloud services (experience with AWS is required).
+Strong experience with SQL and NoSQL          
+A working understanding of code and script (PHP, Python, Perl and/or Ruby)          
+Knowledge of best practices and IT operations in an always-up, always-available service  
+Roles and Responsibilities:     
+Design, build and maintain the CI/CD infrastructure and tools to deliver Horizon Cloud Service     Design and Develop the test automation to validate the builds in the CI/CD pipeline          
+Work closely with development teams to ensure that solutions are designed with customer user experience, scale/performance and operability in mind
+ 
+ 
+4. 
+General:  
+Ability to code and script Experience with systems and IT operations Comfort with frequent, incremental code testing and deployment Strong grasp of automation tools Data management skills 
+A strong focus on business outcomes Comfort with collaboration, open communication and reaching across functional borders Technology Skills 
+(Must have):  
+Python (Need hands on automation skills) Configuration management (preferable: puppet) Docker Kubernetes Unix(*NIX) Maven Database management (Preferable: MongoDB) Bamboo, JIRA, Bit-bucket 
+Strong Knowledge in:  
+How Micro-services work Implementation of Incremental build and deployment pipeline with Docker + some Automated QA framework (preferable: Web-driver, Cucumber and API testing) Agile Practices Log Management (ELK, splunk) Dashboard and Monitor (should be able to design and implement custom dashboards to answer Business needs)
+
+5.
+Devops Engineer with Openshift experience with RHEL experience
+
+Extensive knowledge of ACS, Kubernetes and Docker
+
+Experience developing automated deployments using Ansible and Ansible Tower
+
+Experience scaling container based applications using Kubernetes/ACS
+
+6. 
+
+Cloud Automation DevOps - Experienced DevOps Engineer to help with build and infrastructure automation in the cloud.
+Strong background in one or more tools used for Infrastructure As Code (Terraform, Ansible, Chef, Puppet). Terraform and Ansible preferred. Additionally, experience in a CI/CD pipeline is helpful (We use Git, BitBucket, Jenkins, Gradle, Maven). Experience in controlled and secure deployment pipelines is preferred
+
+7. 
+
+
+Build DevOps Delivery pipeline including Infrastructure and Environment Provisioning, Deployment and Monitoring tools that will support, enhance and grow a true DevOps model for the company
+Create automation scripts, UIs, and continuous delivery pipeline that enhance and expand our CI/CD services
+Design, build, and maintain an automated DevOps delivery/deployment model to enable continuous release of software into cloud environments
+Experience in a DevOps environment using tools such as GIT, Jenkins, Artifactory, Jira, Maven, Ant etc.
+Expertise with Continuous Integration tools such as Jenkins or other similar tools
+Experience with container orchestration platforms such as CloudFoundry, Kubernetes, or Docker
+Experience with monitoring technologies such as TSDBs, StatsD, Grafana, Datadog
+Experience in other scripting or programming languages, such as Shell, Groovy, Ruby, Java, Python
+Experience working in an agile development environment (scrum or Kanban)
+Proficiency in documentation tech (i.e. MS Word, MS Visio, Confluence, Markdown)
+Expertise with static analysis/software quality tools such as SONAR Qube
+Able to work in a team environment by demonstrating excellent written, verbal communication, and collaboration skills
+Experience in Sterling Order Management is plus with knowledge of WebSphere Commerce and Application Server.
+
+8.
+      Experienced with AWS deployment, management and incident diagnosis.
+
+·         Highly experienced in AWS(EC2,ECS,S3,ALB,IAM,RDS,Lambda, Security groups,R53,ACM,Cache,Autoscalling).
+
+·         Experienced in Docker container ecosystem (standalone docker, docker registry, Dockerize Applications)
+
+·         Familiar with Jenkins, Akamai, RabbitMQ , AppDynamics and languages.
+
+9.
+
+Required Skills:
+ 
+• Help transform traditional IT to modern DevOps processes.
+• Use cutting edge technology to create innovative solutions.
+• Implement automation for deployments, IasC, CI/CD, security, and cloud operations.
+• Travel and work onsite at client locations (typically 50%).
+ 
+WHAT YOU’VE DONE
+• Bachelor's Degree in Computer Science, Engineering, Technical Science, or equivalent experience.
+• 3-7 years of experience with coding or scripting languages – with at least two of the following (Ruby/JRuby, Perl, Python, PowerShell, Java, Go, C#, JavaScript, Bash).
+• Experience in executing Agile, Lean, and Continuous Delivery best practices.
+• Strong technical foundation in a number of the following tools and technologies:
+o Windows and/or Linux (Ubuntu/Debian and/or RedHat/Centos/Fedora)
+• Desktop Virtualization, Development tools (VMware, Hyper-V or VirtualBox)
+• Cloud computing 5+ years: (AWS, Google – GCP/GAE/GCE, Rackspace Cloud, Azure)
+• Infrastructure automation 3+ years (Chef, Puppet, Salt, Ansible, Cloud Formation, Terraform, Vagrant, Packer, ARM, Heat)
+• Build tools (Maven, Gradle, Ant, NAnt, MSBuild, Rake, GNU Make)
+• Continuous integration tools (TeamCity, Jenkins, Cruise Control, Bamboo, AWS CodePipelines, TravisCI).
+• Git SCM tools
+• Application servers, servlet containers, and web servers (WebSphere, Tomcat, Jetty, Nginx, Mongrel, Microsoft IIS, Apache HTTP server)
+• Logging - (Splunk, SumoLogic, Graylog, Kibana, Logstash, AWS CloudWatch Logs)
+• Monitoring – (AWS CloudWatch, Nagios, New Relic, Alert Logic, App Dynamics, Boundary)
+
+
+
+
+
+
+
+
+
+
+
+
+

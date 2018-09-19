@@ -1,0 +1,158 @@
+- name: Update and Upgrade Packages
+  become: yes
+    apt:
+      upgrade: yes
+      update_cache: yes
+      cache_valid_time: 86400
+- name: install nrpe
+  become: yes
+    action: >
+      {{ ansible_pkg_mgr }} name={{ item }} state=present update_cache=yes
+    with_items:
+      - nagios-nrpe-server
+      - nagios-plugins
+      - apache2
+- lineinfile:
+  become: yes
+    path: /etc/nagios/nrpe.cfg
+    regexp: '^server_address'
+    insertafter: '^server_address='
+    line: 'server_address=10.0.0.6'
+- name: Restart service httpd, in all cases
+  become: yes
+  service:
+    name: apache2
+    state: restarted
+	
+
+	
+	- name: install nrpe repos
+    action: >
+      {{ ansible_pkg_mgr }} name={{ item }} state=present update_cache=yes
+    with_items:
+      - epel-release
+      - tree
+      - wget
+- name: install nrpe
+    action: >
+      {{ ansible_pkg_mgr }} name={{ item }} state=present update_cache=yes
+    with_items:
+      - nrpe
+      - nagios-plugins-users
+      - nagios-plugins-load
+      - nagios-plugins-swap
+      - nagios-plugins-disk
+      - nagios-plugins-procs
+
+- lineinfile:
+    path: /etc/nagios/nrpe.cfg
+    regexp: '^server_address'
+    insertafter: '^server_address='
+    line: 'server_address=10.0.0.6'
+- name: Restart service httpd, in all cases
+  service:
+    name: nrpe
+    state: restarted
+    enabled: yes
+	
+	
+	
+- name: install nrpe repos
+    action: >
+      {{ ansible_pkg_mgr }} name={{ item }} state=present update_cache=yes
+    with_items:
+      - yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+      - tree
+      - wget
+- name: install nrpe
+    action: >
+      {{ ansible_pkg_mgr }} name={{ item }} state=present update_cache=yes
+    with_items:
+      - nrpe
+      - nagios-plugins-users
+      - nagios-plugins-load
+      - nagios-plugins-swap
+      - nagios-plugins-disk
+      - nagios-plugins-procs
+
+- lineinfile:
+    path: /etc/nagios/nrpe.cfg
+    regexp: '^server_address'
+    insertafter: '^server_address='
+    line: 'server_address=10.0.0.6'
+- name: Restart service nrpe, in all cases
+  service:
+    name: nrpe
+    state: restarted
+    enabled: yes
+	
+	
+#!/bin/sh
+echo "run script with 'sh' ..Please check the folder content after you ran..Thanks"
+#host names below.
+a="buildtool"
+#x="10.0.0.6"
+b="cent-anstow"
+#y="10.0.0.18"
+c="centos7"
+#z="10.0.0.4"
+d="chef"
+#p="10.0.0.7"
+e="puppet"
+#q="10.0.0.5"
+f="rhel7"
+#r="10.0.0.2"
+g="ubuntu16"
+#s="10.0.0.3"
+
+for item in $a $b $c $d $e $f $g
+do
+        rm -f -- $item.cfg
+        cp /usr/local/nagios/etc/servers/sample /usr/local/nagios/etc/servers/$item.cfg
+        sed -i "s/ubuntu_host/$item/g" "$item.cfg"
+        sed -i "s/Ubuntu Host/$item/g" "$item.cfg"
+done
+
+#for ip in $x $y $z $p $q $r $s
+#do
+#if [ $ip -eq $x ]
+#then
+#       sed -i "s/192.168.1.10/$ip/g" "$a.cfg"
+#fi
+#if [ $ip -eq $y ]
+#then
+#       sed -i "s/192.168.1.10/$ip/g" "$b.cfg"
+
+
+
+
+- name: centos repos
+  action: >
+      {{ ansible_pkg_mgr }} name={{ item }} state=present update_cache=yes
+  with_items:
+      - epel-release
+      - java-1.8.0-openjdk.x86_64
+      - wget
+- name: updating java path.
+  shell: echo 'export JAVA_HOME=/usr/lib/jvm/jre-1.8.0-openjdk' | sudo tee -a /etc/profile
+  shell: echo 'export JRE_HOME=/usr/lib/jvm/jre' | sudo tee -a /etc/profile
+  shell: source /etc/profile
+  shell: cd ~
+  shell: sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+  shell: sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+
+- name: install
+  action: >
+      {{ ansible_pkg_mgr }} name={{ item }} state=present update_cache=yes
+  with_items:
+      - jenkins
+- name: Restart service , in all cases
+  service:
+    name: jenkins
+    state: restarted
+    enabled: yes
+	
+	
+	
+
+

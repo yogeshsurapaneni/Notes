@@ -1,0 +1,35 @@
+Question..
+for ANIL KUMAR PENTYALA..........
+
+TASK:
+
+1. Create a Couple of Folders on your Local machine, lets say.. a and b.
+
+2. Take two spreadsheets of excel in the first folder (a). These excell sheet should contain rows and columns as shown below.
+
+First spreadsheet
+							---------------------------------
+							Number | Field Name | Field value
+							---------------------------------
+							1		|	First Name | examplevalue
+							2		|   Middle Name | example value
+							3		|   Last Name    | example value
+							
+Second Spreadsheet
+
+
+---------------------------------
+							Number | Field Name | Field value
+							---------------------------------
+							1		|	First Name | 
+							2		|   Middle Name | 
+							3		|   Last Name    | 
+							
+3. Write Script in any of the following shell,bash,python.
+	so that script sorts the files from one folder and transfer to the other folder only if it sees any content in the field value column. and if it doesnt sees any content it will generate a log file in one folder saying that field value doesnt exits.
+	
+4. after it generates a log it should notify through email that a new file is loaded in logs folder.
+
+
+Thanks
+
