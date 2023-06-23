@@ -1,0 +1,118 @@
+from selenium import webdriver
+import calendar
+Y = int(input("Input the year : "))
+M = int(input("Input the month : "))
+WN = int(input("Input the Course Week Number : "))
+print("----------------")
+print(calendar.month(Y, M))
+print("----------------")
+MDay=input("Monday Date (format=dd) = ")
+TuDay=input("Tuesday Date (format=dd) = ")
+WDay=input("Wednesday Date (format=dd) = ")
+ThDay=input("Thursday Date (format=dd) = ")
+FDay=input("Friday Date (format=dd) = ")
+print("----------------")
+MDate="{}{}{}".format(M,MDay,Y)
+MAct=input("Enter Monday's Activity = ")
+MHrs=input("Hours Worked on Monday = ")
+TuDate="{}{}{}".format(M,TuDay,Y)
+TuAct=input("Enter Tuesday's Activity = ")
+TuHrs=input("Hours Worked on Tuesday = ")
+WDate="{}{}{}".format(M,WDay,Y)
+WAct=input("Enter Wednesday's Activity = ")
+WHrs=input("Hours Worked on Wednesday = ")
+ThDate="{}{}{}".format(M,ThDay,Y)
+ThAct=input("Enter Thursday's Activity = ")
+ThHrs=input("Hours Worked on Thursday = ")
+FDate="{}{}{}".format(M,FDay,Y)
+FAct=input("Enter Friday's Activity = ")
+FHrs=input("Hours Worked on Friday = ")
+print("----------------")
+print("Please Verify Week Number and Dates")
+print("Week Number is ", WN)
+print("Week Starts")
+print(MDate)
+print(MAct)
+print(MHrs)
+print("***")
+print(TuDate)
+print(TuAct)
+print(TuHrs)
+print("***")
+print(WDate)
+print(WAct)
+print(WHrs)
+print("***")
+print(ThDate)
+print(ThAct)
+print(ThHrs)
+print("***")
+print(FDate)
+print(FAct)
+print(FHrs)
+print("Week Ends")
+print("----------------")
+DropDown="week{}".format(WN)
+print(DropDown)
+SID="3195"
+WURL="http://cpt.cisatnec.org/weeklylog.php?week={}&internId={}".format(WN,SID)
+print(WURL)
+options = webdriver.ChromeOptions()
+#options.add_argument('headless')
+driver = webdriver.Chrome(executable_path='C://chromedriver.exe', options=options)
+driver.get("http://cpt.cisatnec.org")
+driver.find_element_by_id("usernamefield").send_keys("ysurapaneni_gps@nec.edu")
+driver.find_element_by_id("pwdfield").send_keys("Yogi@7028")
+driver.find_element_by_xpath("/html/body/div[2]/div/div/form/button").click()
+WeekSelect = driver.find_element_by_id('select')
+for option in WeekSelect.find_elements_by_tag_name('option'):
+	if option.text == DropDown:
+    	option.click()
+    	break
+# Monday
+driver.find_element_by_xpath("/html/body/div[4]/div[2]/form[1]/div[2]/div/input").send_keys(MDate)
+driver.find_element_by_xpath("/html/body/div[4]/div[2]/form[1]/div[3]/div/textarea").send_keys(MAct)
+driver.find_element_by_xpath("/html/body/div[4]/div[2]/form[1]/div[5]/div/input").send_keys(MHrs)
+driver.find_element_by_xpath("/html/body/div[4]/div[2]/form[1]/div[6]/div/button[1]").click()
+
+# Tuesday
+driver.find_element_by_xpath("/html/body/div[4]/div[2]/form[2]/div[2]/div/input").send_keys(TuDate)
+driver.find_element_by_xpath("/html/body/div[4]/div[2]/form[2]/div[3]/div/textarea").send_keys(TuAct)
+driver.find_element_by_xpath("/html/body/div[4]/div[2]/form[2]/div[5]/div/input").send_keys(TuHrs)
+driver.find_element_by_xpath("/html/body/div[4]/div[2]/form[2]/div[6]/div/button[1]").click()
+
+# Wednesday
+driver.find_element_by_xpath("/html/body/div[4]/div[2]/form[3]/div[2]/div/input").send_keys(WDate)
+driver.find_element_by_xpath("/html/body/div[4]/div[2]/form[3]/div[3]/div/textarea").send_keys(WAct)
+driver.find_element_by_xpath("/html/body/div[4]/div[2]/form[3]/div[5]/div/input").send_keys(WHrs)
+driver.find_element_by_xpath("/html/body/div[4]/div[2]/form[3]/div[6]/div/button[1]").click()
+
+# Thursday
+driver.find_element_by_xpath("/html/body/div[4]/div[2]/form[4]/div[2]/div/input").send_keys(ThDate)
+driver.find_element_by_xpath("/html/body/div[4]/div[2]/form[4]/div[3]/div/textarea").send_keys(ThAct)
+driver.find_element_by_xpath("/html/body/div[4]/div[2]/form[4]/div[5]/div/input").send_keys(ThHrs)
+driver.find_element_by_xpath("/html/body/div[4]/div[2]/form[4]/div[6]/div/button[1]").click()
+
+# Friday
+driver.find_element_by_xpath("/html/body/div[4]/div[2]/form[5]/div[2]/div/input").send_keys(FDate)
+driver.find_element_by_xpath("/html/body/div[4]/div[2]/form[5]/div[3]/div/textarea").send_keys(FAct)
+driver.find_element_by_xpath("/html/body/div[4]/div[2]/form[5]/div[4]/div[2]/div/input").send_keys(FHrs)
+driver.find_element_by_xpath("/html/body/div[4]/div[2]/form[5]/div[5]/div/button[1]").click()
+
+#SUBMIT
+
+driver.find_element_by_xpath("/html/body/div[4]/div[2]/form[6]/div/div/button").click()
+
+#driver.close()
+
+
+from pdfminer.pdfparser import PDFParser
+from pdfminer.pdfdocument import PDFDocument
+from pdfminer.pdftypes import resolve1
+
+doc = PDFDocument(PDFParser(open('C://Users//vamsi//Downloads//TimeSheet-saved.pdf', 'rb')))
+fields = resolve1(doc.catalog['AcroForm'])['Fields']
+for i in fields:
+	field = resolve1(i)
+	name, value = field.get('T'), field.get('V')
+	print('{0}: {1}'.format(name, value))
